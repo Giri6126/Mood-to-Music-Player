@@ -1,2 +1,1 @@
-Problem Type: Supervised Learning
-Task: Multiclass Classification
+Problem Type: Supervised 
