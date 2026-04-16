@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feelio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="container app-container">
+
+    <div class="header">
+        <h1 class="app-title">Feelio</h1>
+        <p class="tagline">Music that understands you.</p>
+    </div>
+
+    <div id="formSection" class="fade-transition">
+        <div class="glass-card">
+            <h2 class="form-title">How are you feeling?</h2>
+            <p class="form-subtitle">Fill in the details to get your mood-based music recommendation.</p>
+            <div class="form">
+                <input id="sleep" placeholder="Sleep (0–10)" autocomplete="off">
+                <input id="energy" placeholder="Energy (1–5)" autocomplete="off">
+                <input id="stress" placeholder="Stress (1–5)" autocomplete="off">
+                <input id="social" placeholder="Social (1–5)" autocomplete="off">
+                <input id="positivity" placeholder="Positivity (1–5)" autocomplete="off">
+
+                <button class="btn-primary" onclick="predictMood()">Predict Mood</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="resultSection" class="hidden fade-transition initial-slide-down">
+        <div class="glass-card">
+            <h2 id="moodText" class="mood-text"></h2>
+
+            <p id="quote" class="quote"></p>
+
+            <div class="song-info">
+                <img id="songImage" class="album-art" src="" alt="Album Art">
+            </div>
+
+            <canvas id="visualizer"></canvas>
+
+            <h3 id="songName" class="song-name"></h3>
+
+            <div class="player-controls">
+                <button id="repeatBtn" title="Repeat">🔁</button>
+                <button id="prevBtn" title="Previous">⏮</button>
+                <button id="playPauseBtn" title="Play/Pause">▶️</button>
+                <button id="nextBtn" title="Next">⏭</button>
+            </div>
+
+            <input type="range" id="progressBar" value="0">
+
+            <div class="time">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+
+            <div class="feedback">
+                <p>Did you like this recommendation?</p>
+                <button id="likeBtn" onclick="sendFeedback(true)">👍</button>
+                <button id="dislikeBtn" onclick="sendFeedback(false)">👎</button>
+                <p id="feedbackMsg"></p>
+            </div>
+            
+            <audio id="audioPlayer" crossorigin="anonymous"></audio>
+        </div>
+    </div>
+
+</div>
+
+<script src="/static/js/script.js"></script>
+
+</body>
+</html>
