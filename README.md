@@ -4,7 +4,7 @@ Feelio is an AI-powered mood-based music recommendation web application that und
 
 ---
 
-## 🚀 Features
+ Features
 
 * 🎯 Mood prediction using Machine Learning
 * 🎵 Automatic music recommendation based on mood
