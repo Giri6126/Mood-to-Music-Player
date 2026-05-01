@@ -1,4 +1,4 @@
-# 🎧 Feelio — Music that understands you.
+ Feelio — Music that understands you.
 
 Feelio is an AI-powered mood-based music recommendation web application that understands your emotions and plays the perfect song for your current state of mind.
 
